@@ -34,7 +34,7 @@ describe('BookingScreen restrictions', () => {
         idVerified: true,
         employmentVerified: true,
         verificationStatus: 'approved',
-        updatedAt: {} as any
+        updatedAt: new Date().toISOString()
       }
     });
     const route = { params: { stayId: 'stay1' } } as any;
