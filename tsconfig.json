@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-native",
+    "types": ["jest", "react"]
+  },
+  "extends": "expo/tsconfig.base",
+  "include": ["src", "App.tsx", "__tests__", "jest.setup.ts", "functions"],
+  "exclude": ["node_modules"]
+}
