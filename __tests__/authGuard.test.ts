@@ -13,7 +13,7 @@ describe('useIsVerified', () => {
           idVerified: true,
           employmentVerified: true,
           verificationStatus: 'pending',
-          updatedAt: {} as any
+          updatedAt: new Date().toISOString()
         }
       });
     });
@@ -28,7 +28,7 @@ describe('useIsVerified', () => {
           idVerified: true,
           employmentVerified: true,
           verificationStatus: 'approved',
-          updatedAt: {} as any
+          updatedAt: new Date().toISOString()
         }
       });
     });

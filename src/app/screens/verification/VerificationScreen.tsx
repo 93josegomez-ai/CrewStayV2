@@ -66,7 +66,7 @@ export const VerificationScreen: React.FC = () => {
         idVerified: true,
         employmentVerified: true,
         verificationStatus: 'pending',
-        updatedAt: serverTimestamp() as any
+        updatedAt: new Date().toISOString()
       });
       Alert.alert('Submitted', 'Our security team will review your documents shortly.');
     } catch (error) {
