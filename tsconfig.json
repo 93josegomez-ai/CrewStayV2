@@ -1,17 +1,21 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-native",
-    "types": ["jest", "react"]
+    "types": ["jest", "react"],
+    "typeRoots": ["./types"],
+    "forceConsistentCasingInFileNames": true
   },
-  "extends": "expo/tsconfig.base",
   "include": ["src", "App.tsx", "__tests__", "jest.setup.ts", "functions"],
   "exclude": ["node_modules"]
 }
