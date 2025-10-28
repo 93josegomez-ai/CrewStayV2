@@ -18,6 +18,7 @@ declare interface JestDescribe {
 declare function expect(actual: any): {
   toBe(expected: any): void;
   toEqual(expected: any): void;
+  toContain(expected: any): void;
   toBeTruthy(): void;
   toBeFalsy(): void;
   toThrow(error?: any): void;

@@ -14,6 +14,7 @@ declare namespace React {
   interface FunctionComponent<P = {}> {
     (props: P & { children?: ReactNode }): ReactElement | null;
   }
+  type FC<P = {}> = FunctionComponent<P>;
   interface ComponentClass<P = {}, S = {}> {
     new (props: P): Component<P, S>;
   }
@@ -52,4 +53,5 @@ declare namespace JSX {
 
 declare module 'react' {
   export = React;
+  export type FC<P = {}> = React.FunctionComponent<P>;
 }
