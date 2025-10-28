@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { User } from 'firebase/auth';
 import { Timestamp } from 'firebase/firestore';
 import { VerificationStatus } from '../types/user';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type SerializedUser = {
   uid: string;
@@ -59,8 +59,6 @@ const serializeVerification = (
     updatedAt = rawUpdatedAt.toISOString();
   } else if (typeof rawUpdatedAt === 'string') {
     updatedAt = rawUpdatedAt;
-  } else {
-    updatedAt = null;
   }
 
   return {
