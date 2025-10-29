@@ -26,6 +26,7 @@ service cloud.firestore {
     match /threads/{threadId} {
       allow create: if request.auth != null &&
         request.resource != null &&
+        request.resource.data.participantIds is list &&
         request.auth.uid in request.resource.data.participantIds;
       allow read, update, delete: if request.auth != null &&
         resource != null &&
