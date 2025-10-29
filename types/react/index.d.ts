@@ -53,5 +53,4 @@ declare namespace JSX {
 
 declare module 'react' {
   export = React;
-  export type FC<P = {}> = React.FunctionComponent<P>;
 }
