@@ -51,6 +51,4 @@ declare namespace JSX {
   }
 }
 
-declare module 'react' {
-  export = React;
-}
+export = React;
